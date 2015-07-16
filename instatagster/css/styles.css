@@ -1,0 +1,261 @@
+/*
+Project Name: Arbetsprov
+Author: Julia Demchenko
+Email: julia@supstudio.com
+Phone: +46 (0) 722-505-173
+Version: 1.0
+*/
+
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Main Styles
+ * 3.0 - Typography
+ * 4.0 - jQuery UI Styles
+ * 5.0 - App Elements
+ * 6.0 - Media Queries
+ */
+
+
+
+
+/**
+ * 1.0 Reset
+ */
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: none;
+}
+:focus {
+	outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+/**
+ * 2.0 Main Styles
+ */
+
+body {
+	color: #fff;
+	background: #517e93; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #517e93 0%, #0a416d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#517e93), color-stop(100%,#0a416d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #517e93 0%,#0a416d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #517e93 0%,#0a416d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #517e93 0%,#0a416d 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #517e93 0%,#0a416d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#517e93', endColorstr='#0a416d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-attachment: fixed;
+}
+
+h1 {
+	color: #F0EBD8;
+}
+
+h2 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid;
+	color: #0D1321;
+}
+
+p {
+	color: #0D1321;
+}
+
+a, a:visited {
+	color: #F0EBD8;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFFFF;
+} 
+
+/**
+ * 3.0 Typography
+ */
+
+body,
+p,
+label,
+span,
+div,
+h2, h3, h4, h5, h6 {
+	font-family: 'proxima-nova', sans-serif;
+	font-weight: 300;
+}
+
+h1 {
+	font-family: 'lust-script', serif;
+	font-size: 46px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+p {
+	line-height: 1.4em;
+}
+
+input {
+	font-size: 26px;
+	line-height: 1.4em;
+}
+
+footer {
+	font-size: 0.9em;
+	text-align: center;
+}
+
+
+/**
+ * 4.0 jQuery UI Styles
+ */
+ 
+.ui-helper-hidden-accessible {
+	display: none;
+	visibility: hidden;
+}
+
+.ui-menu {
+	background: #FFFFFF;
+	color: #1D2D44;
+	font-size: 24px;
+	width: 300px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	
+}
+
+.ui-menu-item {
+	padding: 10px;
+	border-top: 1px solid #ebebeb;
+	cursor: pointer;
+}
+
+.ui-menu-item:first-child {
+	border: none;
+}
+
+.ui-menu-item:hover, .ui-state-focus {
+	font-weight: 400;
+	color: #1DD3B0;
+}
+
+.ui-menu-item:hover:after, .ui-state-focus:after{
+	content: "+";
+	position: absolute;
+	right: 10px;
+	color: #1DD3B0;
+	font-weight: 400;
+}
+
+/**
+ * 5.0 App Elements
+ */
+ 
+section, footer {
+	width: 50%;
+	margin: 0 auto;
+	padding: 5% 2% 0;
+	box-sizing: border-box;
+}
+
+.searchform {
+	margin: 40px 0;
+}
+
+input {
+	border: none;
+	background: #F0EBD8;
+	color: #1D2D44;
+	padding: 6px 0 8px 40px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+::-webkit-input-placeholder { color: #B5B2A3;}
+::-moz-placeholder { color:#B5B2A3; } /* firefox 19+ */
+:-ms-input-placeholder { color:#B5B2A3; } /* ie */
+input:-moz-placeholder { color:#B5B2A3; }
+
+#log {
+	padding: 10px 0;
+	color: #F0EBD8;
+}
+
+#log > div {
+	margin: 15px 0;
+}
+
+#log > div > span {
+	font-size: 40px;
+	color: #1D2D44;
+}
+
+/**
+ * 6.0 Media Queries
+ */
+ 
+@media (max-width: 1024px) {
+	section, footer { width: 70%;}
+}
+
+@media (max-width: 800px) {
+	section, footer { width: 100%; padding-top: 10%; }
+	h1 { font-size: 26px; }
+	#log > div > span { font-size: 20px; }
+}
